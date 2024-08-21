@@ -38,13 +38,12 @@ const QueryBuilder: React.FC<QueryBuilderProps> = ({onSubmit}) => {
   const [rules, setRules] = useState<Rule[]>([]);
   const [ruleSets, setRuleSets] = useState<RuleSet[]>([]);
 
-  const handleSubmit = async (e: React.SyntheticEvent<HTMLFormElement>) => {
-    e.preventDefault()
+  const handleSubmit = async () => {
     await onSubmit(rules, ruleSets);
   };
 
   const addRule = () => {
-    setRules([...rules, { field: '', operator: '', value: '' }]);
+    setRules([...rules, { field: 'title', operator: 'contains', value: '' }]);
   };
 
   const removeRule = (index: number) => {
@@ -53,12 +52,14 @@ const QueryBuilder: React.FC<QueryBuilderProps> = ({onSubmit}) => {
 
   const handleFieldChange = (index: number, field: string) => {
     const updatedRules = [...rules];
+    console.log(field)
     updatedRules[index].field = field;
     setRules(updatedRules);
   };
 
   const handleOperatorChange = (index: number, operator: string) => {
     const updatedRules = [...rules];
+    console.log(operator)
     updatedRules[index].operator = operator;
     setRules(updatedRules);
   };
@@ -75,36 +76,36 @@ const QueryBuilder: React.FC<QueryBuilderProps> = ({onSubmit}) => {
   };
 
   return (
-    <form onSubmit={(e)=>handleSubmit(e)}>
+    <form>
       <h3>Query Builder</h3>
       {rules.map((rule, index) => (
         <div key={index}>
           <select onChange={(e) => handleFieldChange(index, e.target.value)}>
-            <option value="price">Price</option>
-            <option value="quantity">Quantity</option>
-            <option value="title">Title</option>
-            <option value="description">Description</option>
+          {Object.keys(availableFields).map((field) => (
+              <option key={field} value={field}>
+                {field}
+              </option>
+            ))}
           </select>
           <select onChange={(e) => handleOperatorChange(index, e.target.value)}>
-            <option value=">">Greater than</option>
-            <option value="<">Less than</option>
-            <option value=">=">Greater or equal</option>
-            <option value="<=">Less or equal</option>
-            <option value="contains">contains</option>
-            <option value="not_contains">not contains</option>
-            <option value="equals">equals</option>
-            <option value="not_equals">not equals</option>
+            {availableFields[rule.field].map((op: string, i: number) => {
+                return (
+                <option key={i} value={op}>
+                    {op}
+                </option>)
+            })}
           </select>
           <input
             type="text"
             onChange={(e) => handleValueChange(index, e.target.value)}
+            required
           />
           <button onClick={() => removeRule(index)}>Remove Rule</button>
         </div>
       ))}
       <button onClick={addRule}>Add Rule</button>
       <button onClick={exportToJSON}>Export to JSON</button>
-      <button className='ml-6' type='submit'>Submit</button>
+      <button onClick={handleSubmit} className='ml-6' type='submit'>Submit</button>
     </form>
   );
 };
