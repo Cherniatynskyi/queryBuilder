@@ -70,14 +70,10 @@ const QueryBuilder: React.FC<QueryBuilderProps> = ({onSubmit}) => {
     setRules(updatedRules);
   };
 
-  const exportToJSON = () => {
-    const config = { rules, ruleSets };
-    console.log(JSON.stringify(config));
-  };
-
   return (
     <form>
-      <h3>Query Builder</h3>
+      <button className='text-white text-lg bg-green-500 p-5 rounded-md hover:bg-green-600 transition-colors' onClick={addRule}>Add Rule</button>
+      <button  onClick={handleSubmit} className='text-white text-lg bg-blue-500 p-5 rounded-md ml-6  hover:bg-blue-600 transition-colors' type='submit'>Submit</button>
       {rules.map((rule, index) => (
         <div key={index}>
           <select onChange={(e) => handleFieldChange(index, e.target.value)}>
@@ -103,9 +99,7 @@ const QueryBuilder: React.FC<QueryBuilderProps> = ({onSubmit}) => {
           <button onClick={() => removeRule(index)}>Remove Rule</button>
         </div>
       ))}
-      <button onClick={addRule}>Add Rule</button>
-      <button onClick={exportToJSON}>Export to JSON</button>
-      <button onClick={handleSubmit} className='ml-6' type='submit'>Submit</button>
+
     </form>
   );
 };

@@ -1,9 +1,7 @@
-// pages/index.tsx
 "use client"
 import React, { useState } from 'react';
 import QueryBuilder from '../components/QueryBuilder';
 import { Rule } from '../components/QueryBuilder';
-
 
 type QueryType = {
     rules: Rule[]
