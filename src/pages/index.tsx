@@ -1,7 +1,7 @@
 "use client"
 import React, { useState } from 'react';
 import QueryBuilder from '../components/QueryBuilder';
-import { Rule } from '../components/QueryBuilder';
+import { Rule } from '@/utils/builderTypes';
 
 type QueryType = {
     rules: Rule[]
@@ -32,26 +32,24 @@ const HomePage: React.FC = () => {
   };
 
   return (
-    <div>
+    <div className='p-10'>
       <QueryBuilder onSubmit={async (rules: Rule[]) => fetchProducts({rules})} />
-      <table>
+      <table className='min-w-full divide-y divide-gray-200 dark:divide-neutral-700'>
         <thead>
-          <tr>
-            <th>Title</th>
-            <th>Description</th>
-            <th>Price</th>
-            <th>Quantity</th>
-            <th>In Stock</th>
+          <tr >
+            <th className='px-6 py-3 text-start text-xs font-medium text-gray-500 uppercase dark:text-neutral-500'>Title</th>
+            <th className='px-6 py-3 text-start text-xs font-medium text-gray-500 uppercase dark:text-neutral-500'>Description</th>
+            <th className='px-6 py-3 text-start text-xs font-medium text-gray-500 uppercase dark:text-neutral-500'>Price</th>
+            <th className='px-6 py-3 text-start text-xs font-medium text-gray-500 uppercase dark:text-neutral-500'>Quantity</th>
           </tr>
         </thead>
-        <tbody>
+        <tbody className='divide-y divide-gray-200 dark:divide-neutral-700'>
           {products.map((product: Product, index) => (
             <tr key={index}>
-              <td>{product.title}</td>
-              <td>{product.description}</td>
-              <td>{product.price}</td>
-              <td>{product.quantity}</td>
-              <td>{product.inStock ? 'Yes' : 'No'}</td>
+              <td className='px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-800 ' >{product.title}</td>
+              <td className='px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-800 ' >{product.description}</td>
+              <td className='px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-800 ' >{product.price}</td>
+              <td className='px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-800 ' >{product.quantity}</td>
             </tr>
           ))}
         </tbody>

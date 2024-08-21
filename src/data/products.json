@@ -1,16 +1,182 @@
 [
-    {
-      "title": "Laptop",
-      "description": "A powerful laptop.",
-      "price": 1200.99,
-      "quantity": 10,
-      "inStock": true
-    },
-    {
-      "title": "Mouse",
-      "description": "A wireless mouse.",
-      "price": 20.50,
-      "quantity": 200,
-      "inStock": true
-    }
-  ]
+  {
+    "title": "Laptop",
+    "description": "A powerful laptop.",
+    "price": 1200.99,
+    "quantity": 50
+  },
+  {
+    "title": "Smartphone",
+    "description": "A high-end smartphone with a great camera.",
+    "price": 899.99,
+    "quantity": 150
+  },
+  {
+    "title": "Tablet",
+    "description": "A versatile tablet for work and play.",
+    "price": 499.99,
+    "quantity": 80
+  },
+  {
+    "title": "Smartwatch",
+    "description": "A smartwatch with fitness tracking features.",
+    "price": 199.99,
+    "quantity": 120
+  },
+  {
+    "title": "Headphones",
+    "description": "Noise-cancelling over-ear headphones.",
+    "price": 149.99,
+    "quantity": 200
+  },
+  {
+    "title": "Gaming Console",
+    "description": "A next-gen gaming console.",
+    "price": 399.99,
+    "quantity": 75
+  },
+  {
+    "title": "Camera",
+    "description": "A DSLR camera with 24MP sensor.",
+    "price": 799.99,
+    "quantity": 40
+  },
+  {
+    "title": "External Hard Drive",
+    "description": "A 2TB external hard drive.",
+    "price": 89.99,
+    "quantity": 150
+  },
+  {
+    "title": "Monitor",
+    "description": "A 27-inch 4K monitor.",
+    "price": 329.99,
+    "quantity": 100
+  },
+  {
+    "title": "Keyboard",
+    "description": "A mechanical keyboard with RGB lighting.",
+    "price": 129.99,
+    "quantity": 300
+  },
+  {
+    "title": "Mouse",
+    "description": "A wireless ergonomic mouse.",
+    "price": 59.99,
+    "quantity": 250
+  },
+  {
+    "title": "Printer",
+    "description": "A multifunction laser printer.",
+    "price": 229.99,
+    "quantity": 60
+  },
+  {
+    "title": "Router",
+    "description": "A high-speed Wi-Fi 6 router.",
+    "price": 179.99,
+    "quantity": 100
+  },
+  {
+    "title": "Smart Home Hub",
+    "description": "A smart home hub for automation.",
+    "price": 129.99,
+    "quantity": 90
+  },
+  {
+    "title": "Bluetooth Speaker",
+    "description": "A portable Bluetooth speaker with deep bass.",
+    "price": 89.99,
+    "quantity": 180
+  },
+  {
+    "title": "E-Reader",
+    "description": "A lightweight e-reader with a glare-free display.",
+    "price": 99.99,
+    "quantity": 140
+  },
+  {
+    "title": "Action Camera",
+    "description": "A waterproof action camera for extreme sports.",
+    "price": 199.99,
+    "quantity": 110
+  },
+  {
+    "title": "Smart Light Bulb",
+    "description": "A smart light bulb with color control.",
+    "price": 24.99,
+    "quantity": 400
+  },
+  {
+    "title": "VR Headset",
+    "description": "A virtual reality headset for immersive gaming.",
+    "price": 299.99,
+    "quantity": 70
+  },
+  {
+    "title": "Drone",
+    "description": "A drone with 4K camera and GPS.",
+    "price": 499.99,
+    "quantity": 50
+  },
+  {
+    "title": "Fitness Tracker",
+    "description": "A fitness tracker with heart rate monitor.",
+    "price": 59.99,
+    "quantity": 200
+  },
+  {
+    "title": "Electric Toothbrush",
+    "description": "An electric toothbrush with multiple modes.",
+    "price": 49.99,
+    "quantity": 180
+  },
+  {
+    "title": "Portable Charger",
+    "description": "A 10000mAh portable charger.",
+    "price": 29.99,
+    "quantity": 300
+  },
+  {
+    "title": "Smart Thermostat",
+    "description": "A smart thermostat with voice control.",
+    "price": 199.99,
+    "quantity": 60
+  },
+  {
+    "title": "Coffee Maker",
+    "description": "A programmable coffee maker.",
+    "price": 89.99,
+    "quantity": 140
+  },
+  {
+    "title": "Air Purifier",
+    "description": "An air purifier with HEPA filter.",
+    "price": 199.99,
+    "quantity": 100
+  },
+  {
+    "title": "Robot Vacuum",
+    "description": "A robot vacuum with smart mapping.",
+    "price": 299.99,
+    "quantity": 90
+  },
+  {
+    "title": "Instant Camera",
+    "description": "An instant camera for on-the-spot prints.",
+    "price": 69.99,
+    "quantity": 130
+  },
+  {
+    "title": "Electric Kettle",
+    "description": "An electric kettle with temperature control.",
+    "price": 49.99,
+    "quantity": 210
+  },
+  {
+    "title": "Smart Lock",
+    "description": "A smart lock with remote access.",
+    "price": 149.99,
+    "quantity": 80
+  }
+]
