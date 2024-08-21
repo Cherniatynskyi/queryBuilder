@@ -1,0 +1,16 @@
+[
+    {
+      "title": "Laptop",
+      "description": "A powerful laptop.",
+      "price": 1200.99,
+      "quantity": 10,
+      "inStock": true
+    },
+    {
+      "title": "Mouse",
+      "description": "A wireless mouse.",
+      "price": 20.50,
+      "quantity": 200,
+      "inStock": true
+    }
+  ]

@@ -1,0 +1,26 @@
+{
+    "rules": [
+      {
+        "field": "price",
+        "operator": ">",
+        "value": 100
+      },
+      {
+        "field": "title",
+        "operator": "contains",
+        "value": "laptop"
+      }
+    ],
+    "ruleSets": [
+      {
+        "rules": [
+          {
+            "field": "quantity",
+            "operator": "<=",
+            "value": 50
+          }
+        ],
+        "combineWith": "AND"
+      }
+    ]
+  }
